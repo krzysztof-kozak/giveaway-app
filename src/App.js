@@ -3,7 +3,13 @@ import { HashRouter, Route, Link, Switch, NavLink } from "react-router-dom";
 import Home from "./components/home/Home";
 
 function App() {
-  return <Home />;
+  return (
+    <HashRouter>
+      <>
+        <Route exact path="/" component={Home} />
+      </>
+    </HashRouter>
+  );
 }
 
 export default App;
