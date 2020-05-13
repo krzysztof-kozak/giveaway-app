@@ -56,8 +56,16 @@ export default function HomeNavHeader() {
                   Oddaj niechciane rzeczy w zaufane ręce
                 </h1>
                 <div className="buttons-wrapper">
-                  <button>ODDAJ RZECZY</button>
-                  <button>ZORGANIZUJ ZBIÓRKĘ</button>
+                  <button className="intro__button">
+                    ODDAJ
+                    <br />
+                    RZECZY
+                  </button>
+                  <button className="intro__button">
+                    ZORGANIZUJ
+                    <br />
+                    ZBIÓRKĘ
+                  </button>
                 </div>
               </section>
             </div>

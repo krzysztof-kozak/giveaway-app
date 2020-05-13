@@ -20,8 +20,9 @@
   li + li {
     margin-left: 3.4375rem;
   }
-  a {
+  .menu__link {
     text-decoration: none;
+    font-size: 1.125rem;
   }
 }
 
@@ -31,9 +32,21 @@
   }
   a {
     text-decoration: none;
+    font-size: 0.875rem;
+    margin-top: 2.875rem;
+    margin-bottom: 1.5625rem;
   }
 }
 
-.navigation__link {
-  font-size: 0.875rem;
+.intro__title {
+  font-size: 2.375rem;
+  text-align: center;
+  letter-spacing: -0.76px;
+  line-height: 55px;
+  position: relative;
+}
+
+.intro__button {
+  font-size: 2.375rem;
+  font-weight: 300;
 }
