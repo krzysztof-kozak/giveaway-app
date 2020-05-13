@@ -10,6 +10,30 @@
   width: 50%;
 }
 
+.login-wrapper,
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  li + li {
+    margin-left: 3.4375rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.login-wrapper {
+  .login-link + .login-link {
+    margin-left: 3.4375rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
 .navigation__link {
   font-size: 0.875rem;
 }

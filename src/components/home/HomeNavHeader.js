@@ -12,28 +12,39 @@ export default function HomeNavHeader() {
             <div className="content-wrapper">
               <nav className="navigation">
                 <div className="login-wrapper">
-                  <a href="#" className="navigation__link">
+                  <a href="#" className="login-link">
                     Zaloguj
                   </a>
-                  <a href="#" className="navigation__link">
+                  <a href="#" className="login-link">
                     Załóż konto
                   </a>
                 </div>
-                <ul>
+
+                <ul className="menu">
                   <li>
-                    <a href="#">Start</a>
+                    <a href="#" className="menu__link">
+                      Start
+                    </a>
                   </li>
                   <li>
-                    <a href="#">O co chodzi?</a>
+                    <a href="#" className="menu__link">
+                      O co chodzi?
+                    </a>
                   </li>
                   <li>
-                    <a href="#">O nas</a>
+                    <a href="#" className="menu__link">
+                      O nas
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Fundacha i organizacje</a>
+                    <a href="#" className="menu__link">
+                      Fundacha i organizacje
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Kontakt</a>
+                    <a href="#" className="menu__link">
+                      Kontakt
+                    </a>
                   </li>
                 </ul>
               </nav>
