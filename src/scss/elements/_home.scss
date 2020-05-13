@@ -1,3 +1,4 @@
+/* Nav */
 .hero {
   display: flex;
 }
@@ -69,4 +70,34 @@
   justify-content: center;
   align-items: center;
   flex-grow: 3;
+}
+
+/* Three columns */
+.three-columns-wrapper {
+  background-image: url(../../assets/3-columns-background.png);
+}
+.three-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.article-statistics {
+  width: 20%;
+  text-align: center;
+  padding: 3em 0 2.5em;
+}
+
+.article-statistics__title {
+  font-size: 4rem;
+  margin-bottom: 0.3em;
+}
+
+.article-statistics__subtitle {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.article-statistics__text {
+  font-size: 0.8rem;
 }

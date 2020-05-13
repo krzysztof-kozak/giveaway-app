@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <HomeNavHeader />
+      <HomeThreeColumns />
       <HomeContact />
       <HomeSimpleSteps />
-      <HomeThreeColumns />
       <HomeWhoWeHelp />
     </>
   );
