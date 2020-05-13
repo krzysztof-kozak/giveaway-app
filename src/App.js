@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter, Route, Link, Switch, NavLink } from "react-router-dom";
-import Home from "./components/home/Home";
+import Home from "./components/Home";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Logout from "./components/logout/Logout"
