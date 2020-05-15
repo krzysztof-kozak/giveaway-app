@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HomeSimpleSteps() {
   return (
@@ -48,11 +49,11 @@ export default function HomeSimpleSteps() {
             </div>
           </div>
         </div>
-        <a href="#" className="intro__form-link">
+        <Link to="/logowanie" className="intro__form-link">
           ODDAJ
           <br />
           RZECZY
-        </a>
+        </Link>
       </section>
     </>
   );
