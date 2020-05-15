@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <HomeNavHeader />
       <HomeThreeColumns />
-      <HomeContact />
       <HomeSimpleSteps />
+      <HomeContact />
       <HomeWhoWeHelp />
     </>
   );
