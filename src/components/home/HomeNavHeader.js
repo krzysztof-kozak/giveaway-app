@@ -7,7 +7,11 @@ export default function HomeNavHeader() {
       <header className="page-header">
         <div className="container">
           <section className="hero">
-            <img src={heroImage} alt="giveaway items in a box" className="hero__image" />
+            <img
+              src={heroImage}
+              alt="giveaway items in a box"
+              className="hero__image"
+            />
 
             <div className="content-wrapper">
               <nav className="navigation">
@@ -56,16 +60,16 @@ export default function HomeNavHeader() {
                   Oddaj niechciane rzeczy w zaufane ręce
                 </h1>
                 <div className="buttons-wrapper">
-                  <button className="intro__button">
+                  <a href="#" className="intro__form-link">
                     ODDAJ
                     <br />
                     RZECZY
-                  </button>
-                  <button className="intro__button">
+                  </a>
+                  <a href="#" className="intro__form-link">
                     ZORGANIZUJ
                     <br />
                     ZBIÓRKĘ
-                  </button>
+                  </a>
                 </div>
               </section>
             </div>

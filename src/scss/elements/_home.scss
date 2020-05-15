@@ -54,15 +54,17 @@
 
 .buttons-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 90%;
 }
 
-.intro__button {
+.intro__form-link {
   font-size: 1.3rem;
-  padding: 0.5em 2em;
+  padding: 0.5em 0;
   border: 1px solid black;
-  min-width: 220px;
+  min-width: 183px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .intro {
@@ -108,7 +110,7 @@
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  .intro__button {
+  .intro__form-link {
     align-self: center;
     margin: 2rem 0 4rem;
   }

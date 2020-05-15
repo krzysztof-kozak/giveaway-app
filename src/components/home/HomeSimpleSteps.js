@@ -48,11 +48,11 @@ export default function HomeSimpleSteps() {
             </div>
           </div>
         </div>
-        <button className="intro__button">
+        <a href="#" className="intro__form-link">
           ODDAJ
           <br />
           RZECZY
-        </button>
+        </a>
       </section>
     </>
   );
