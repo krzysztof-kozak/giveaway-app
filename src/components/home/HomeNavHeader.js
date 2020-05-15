@@ -28,7 +28,7 @@ export default function HomeNavHeader() {
 
                 <ul className="menu">
                   <li>
-                    <a href="#" className="menu__link">
+                    <a href="/" className="menu__link">
                       Start
                     </a>
                   </li>
@@ -46,17 +46,25 @@ export default function HomeNavHeader() {
                     </SmoothLink>
                   </li>
                   <li>
-                    <a href="#" className="menu__link">
+                    <SmoothLink
+                      activeClass="active"
+                      to="simpleSteps"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="menu__link"
+                    >
                       O nas
-                    </a>
+                    </SmoothLink>
                   </li>
                   <li>
-                    <a href="#" className="menu__link">
+                    <a href="/" className="menu__link">
                       Fundacha i organizacje
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="menu__link">
+                    <a href="/" className="menu__link">
                       Kontakt
                     </a>
                   </li>

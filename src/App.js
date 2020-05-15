@@ -1,10 +1,10 @@
 import React from "react";
 import { HashRouter, Route, Link, Switch, NavLink } from "react-router-dom";
 import Home from "./components/Home";
-import Register from "./components/register/Register";
-import Login from "./components/login/Login";
-import Logout from "./components/logout/Logout"
-import Form from "./components/form/Form";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -19,5 +19,4 @@ function App() {
     </HashRouter>
   );
 }
-
 export default App;
