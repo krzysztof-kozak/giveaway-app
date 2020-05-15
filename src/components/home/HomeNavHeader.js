@@ -1,5 +1,7 @@
 import React from "react";
 import heroImage from "../../assets/hero-image.png";
+import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export default function HomeNavHeader() {
   return (
@@ -16,12 +18,12 @@ export default function HomeNavHeader() {
             <div className="content-wrapper">
               <nav className="navigation">
                 <div className="login-wrapper">
-                  <a href="#" className="login-link">
+                  <Link to="/logowanie" className="login-link">
                     Zaloguj
-                  </a>
-                  <a href="#" className="login-link">
+                  </Link>
+                  <Link to="/rejestracja" className="login-link">
                     Załóż konto
-                  </a>
+                  </Link>
                 </div>
 
                 <ul className="menu">
@@ -31,9 +33,17 @@ export default function HomeNavHeader() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="menu__link">
+                    <SmoothLink
+                      activeClass="active"
+                      to="simpleSteps"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="menu__link"
+                    >
                       O co chodzi?
-                    </a>
+                    </SmoothLink>
                   </li>
                   <li>
                     <a href="#" className="menu__link">
@@ -60,16 +70,16 @@ export default function HomeNavHeader() {
                   Oddaj niechciane rzeczy w zaufane ręce
                 </h1>
                 <div className="buttons-wrapper">
-                  <a href="#" className="intro__form-link">
+                  <Link to="/logowanie" className="intro__form-link">
                     ODDAJ
                     <br />
                     RZECZY
-                  </a>
-                  <a href="#" className="intro__form-link">
+                  </Link>
+                  <Link to="/logowanie" className="intro__form-link">
                     ZORGANIZUJ
                     <br />
                     ZBIÓRKĘ
-                  </a>
+                  </Link>
                 </div>
               </section>
             </div>

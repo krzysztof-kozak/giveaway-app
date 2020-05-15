@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function HomeSimpleSteps() {
   return (
     <>
-      <section className="steps">
+      <section className="steps" id="simpleSteps">
         <h2 className="steps__title">Wystarczą 4 proste kroki</h2>
 
         <div className="steps-background">
