@@ -59,9 +59,17 @@ export default function HomeNavHeader() {
                     </SmoothLink>
                   </li>
                   <li>
-                    <a href="/" className="menu__link">
-                      Fundacha i organizacje
-                    </a>
+                    <SmoothLink
+                      activeClass="active"
+                      to="who-we-help"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="menu__link"
+                    >
+                      Fundacja i organizacje
+                    </SmoothLink>
                   </li>
                   <li>
                     <a href="/" className="menu__link">

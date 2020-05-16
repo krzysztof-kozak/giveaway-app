@@ -172,3 +172,60 @@ p.about-us__text {
 img.about-us__image {
   width: 50%;
 }
+
+/* Who we help */
+.who-we-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.who-we-help__title {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: -0.76px;
+  margin-bottom: 2rem;
+}
+
+.category-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.who-we-help__button {
+  padding: 0.6em 1.3em;
+  font-size: 1.3rem;
+  border: none;
+  background: none;
+  margin: 1rem 0;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    outline: 1px solid black;
+  }
+}
+
+.who-we-help__text {
+  font-size: 1rem;
+  text-align: center;
+  width: 35%;
+  max-width: 500px;
+  margin: 2rem 0;
+  line-height: 1.5rem;
+}
+
+.organizations-wrapper {
+  width: 100%;
+}
+
+.organization {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+  &:nth-child(2) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
