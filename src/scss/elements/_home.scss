@@ -229,3 +229,11 @@ img.about-us__image {
     border-bottom: 1px solid black;
   }
 }
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+}
