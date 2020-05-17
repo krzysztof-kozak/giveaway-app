@@ -28,6 +28,7 @@
   .menu__link {
     text-decoration: none;
     font-size: 1rem;
+    cursor: pointer;
   }
 }
 
@@ -231,9 +232,70 @@ img.about-us__image {
 }
 
 /* Contact */
+.background-wrapper {
+  background-image: url(/static/media/background-contact-form.f4db7ddd.jpg);
+  filter: opacity(0.5);
+  background-size: cover;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
+  width: 30%;
+  font-family: $font-base;
+  color: $onyx;
+  padding: 2em;
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  input,
+  textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $sonic-silver;
+    padding: 0.3em;
+    background: none;
+  }
+  textarea {
+    margin-top: 1em;
+  }
+}
+
+.form-button {
+  align-self: flex-end;
+  padding: 0.6em 1.3em;
+  margin-top: 1em;
+  font-size: 1rem;
+  background: #fff;
   border: 1px solid black;
-  width: 40%;
+  cursor: pointer;
+}
+
+.form-section-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-section {
+  display: grid;
+  margin-bottom: 1em;
+}
+
+.contact-form__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.page-footer-text {
+  text-align: center;
 }

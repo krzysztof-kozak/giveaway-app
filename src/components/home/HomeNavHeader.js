@@ -72,9 +72,17 @@ export default function HomeNavHeader() {
                     </SmoothLink>
                   </li>
                   <li>
-                    <a href="/" className="menu__link">
+                    <SmoothLink
+                      activeClass="active"
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="menu__link"
+                    >
                       Kontakt
-                    </a>
+                    </SmoothLink>
                   </li>
                 </ul>
               </nav>
