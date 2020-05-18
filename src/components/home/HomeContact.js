@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function HomeContact() {
+  const [form, setForm] = useState({ name: "", email: "name@domain.pl" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
+    });
+  };
+
   return (
     <>
       <div className="background-wrapper">
@@ -11,12 +23,24 @@ export default function HomeContact() {
             <div className="form-section-wrapper">
               <div className="form-section">
                 <label htmlFor="userName">Wpisz swoje imię</label>
-                <input type="text" name="name" id="userName" />
+                <input
+                  type="text"
+                  name="name"
+                  id="userName"
+                  value={form.name}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="form-section">
                 <label htmlFor="userEmail">Wpisz swój email</label>
-                <input type="email" name="email" id="userEmail" />
+                <input
+                  type="email"
+                  name="email"
+                  id="userEmail"
+                  value={form.email}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
