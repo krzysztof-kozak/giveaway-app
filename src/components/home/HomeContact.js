@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function HomeContact() {
-  const [form, setForm] = useState({ name: "", email: "name@domain.pl" });
+  const [form, setForm] = useState({ name: "imię", email: "nazwa@domena.pl" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
