@@ -9,6 +9,7 @@ export default function HomeContact() {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [validationMessage, setValidationMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,11 +36,27 @@ export default function HomeContact() {
     }
     setEmailError("");
 
-    if (form.message.length < 120) {
+    if (form.message.length < 5) {
       setMessageError("Wiadomość musi mieć 120 znaków");
       return;
     }
     setMessageError("");
+
+    fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+      method: "POST",
+      body: JSON.stringify(form),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.text())
+      .then((resp) =>
+        resp.status === 200 //"success" też nie działa
+          ? setValidationMessage(
+              "Wiadomość została wysłana! Wkrótce się skontaktujemy."
+            )
+          : setValidationMessage("Błąd serwera")
+      );
   };
 
   return (
@@ -48,6 +65,7 @@ export default function HomeContact() {
         <section className="contact container" id="contact">
           <form className="contact-form" onSubmit={handleSubmit}>
             <h2 className="contact-form__title">Skontaktuj się z nami</h2>
+            <p>{validationMessage}</p>
 
             <div className="form-section-wrapper">
               <div className="form-section">
