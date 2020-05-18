@@ -28,17 +28,9 @@ export default function HomeNavHeader() {
 
                 <ul className="menu">
                   <li>
-                  <SmoothLink
-                      activeClass="active"
-                      to="intro"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
-                      className="menu__link"
-                    >
+                    <Link to="/" className="menu__link">
                       Start
-                    </SmoothLink>
+                    </Link>
                   </li>
                   <li>
                     <SmoothLink
