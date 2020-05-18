@@ -1,6 +1,16 @@
 import React from "react";
+const API = "http://localhost:3000";
 
 export default function HomeWhoWeHelp() {
+  fetch(`${API}/fundations`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
   return (
     <>
       <section className="who-we-help" id="who-we-help">

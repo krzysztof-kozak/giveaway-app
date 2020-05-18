@@ -245,7 +245,7 @@ img.about-us__image {
     bottom: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.5);
-    z-index: 0
+    z-index: 0;
   }
 }
 
@@ -313,6 +313,12 @@ img.about-us__image {
     width: 80%;
     height: 50px;
   }
+}
+
+.contact-form__error {
+  font-size: 0.8rem;
+  color: red;
+  font-family: $font-base;
 }
 
 .page-footer-text {

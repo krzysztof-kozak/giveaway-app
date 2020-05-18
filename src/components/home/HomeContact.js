@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
 export default function HomeContact() {
-  const [form, setForm] = useState({ name: "imię", email: "nazwa@domena.pl" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,11 +20,33 @@ export default function HomeContact() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (form.name !== "kris") {
+      setNameError("Podane imię jest nieprawidłowe");
+      return;
+    }
+    setNameError("");
+
+    if (form.email !== "kris@kris.pl") {
+      setEmailError("Podany email jest nieprawidłowy");
+      return;
+    }
+    setEmailError("");
+
+    if (form.message.length < 120) {
+      setMessageError("Wiadomość musi mieć 120 znaków");
+      return;
+    }
+    setMessageError("");
+  };
+
   return (
     <>
       <div className="background-wrapper">
         <section className="contact container" id="contact">
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <h2 className="contact-form__title">Skontaktuj się z nami</h2>
 
             <div className="form-section-wrapper">
@@ -30,6 +59,7 @@ export default function HomeContact() {
                   value={form.name}
                   onChange={handleChange}
                 />
+                <p className="contact-form__error">{nameError}</p>
               </div>
 
               <div className="form-section">
@@ -41,6 +71,7 @@ export default function HomeContact() {
                   value={form.email}
                   onChange={handleChange}
                 />
+                <p className="contact-form__error">{emailError}</p>
               </div>
             </div>
 
@@ -51,7 +82,10 @@ export default function HomeContact() {
               cols="20"
               rows="4"
               placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi exercitationem doloremque mollitia qui impedit possimus libero vel voluptatibus enim iste, dolore, eos sit quia perspiciatis minus voluptatum officia officiis cum"
+              value={form.message}
+              onChange={handleChange}
             ></textarea>
+            <p className="contact-form__error">{messageError}</p>
 
             <button className="form-button" type="submit">
               Wyślij
