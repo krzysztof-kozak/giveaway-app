@@ -28,9 +28,17 @@ export default function HomeNavHeader() {
 
                 <ul className="menu">
                   <li>
-                    <a href="/" className="menu__link">
+                  <SmoothLink
+                      activeClass="active"
+                      to="intro"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="menu__link"
+                    >
                       Start
-                    </a>
+                    </SmoothLink>
                   </li>
                   <li>
                     <SmoothLink
@@ -87,7 +95,7 @@ export default function HomeNavHeader() {
                 </ul>
               </nav>
 
-              <section className="intro">
+              <section className="intro" id="intro">
                 <h1 className="intro__title">
                   Zacznij pomagać!
                   <br />
