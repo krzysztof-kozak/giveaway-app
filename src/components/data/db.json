@@ -2,27 +2,72 @@
   "fundations": [
     {
       "name": "Fundacjom",
-      "desc": "jakis opis",
+      "desc": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
       "items": [
         {
-          "header": "to jest header",
-          "subheader": "to jest subheader",
-          "desc": "to jest desc"
+          "header": "Fundacja “Dbam o Zdrowie”",
+          "subheader": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "desc": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "header": "to jest header",
-          "subheader": "to jest subheader",
-          "desc": "to jest desc"
+          "header": "Fundacja “Dla dzieci”",
+          "subheader": "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+          "desc": "ubrania, meble, zabawki"
         },
         {
-          "header": "to jest header",
-          "subheader": "to jest subheader",
-          "desc": "to jest desc"
+          "header": "Fundacja “Bez domu”",
+          "subheader": "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "desc": "ubrania, jedzenie, ciepłe koce"
+        },
+        {
+          "header": "Fundacja “Lorem 1”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 2”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 3”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 4”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 5”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 6”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 7”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 8”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
+        },
+        {
+          "header": "Fundacja “Lorem 9”",
+          "subheader": "Cel i misja: Lorem ipsum",
+          "desc": "lorem, ipsum, dolor, sit, amet"
         }
       ]
     },
     {
-      "name": "Organizacjom",
+      "name": "Organizacjom pozarządowym",
       "desc": "jakis opis",
       "items": [
         {
