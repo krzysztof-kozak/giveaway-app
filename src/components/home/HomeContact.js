@@ -23,20 +23,22 @@ export default function HomeContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validName = /^[A-Za-z]+$/;
+    const validEmail = /\S+@\S+\.\S+/;
 
-    if (form.name !== "kris") {
+    if (!validName.test(form.name)) {
       setNameError("Podane imię jest nieprawidłowe");
       return;
     }
     setNameError("");
 
-    if (form.email !== "kris@kris.pl") {
+    if (!validEmail.test(form.email)) {
       setEmailError("Podany email jest nieprawidłowy");
       return;
     }
     setEmailError("");
 
-    if (form.message.length < 5) {
+    if (form.message.length < 120) {
       setMessageError("Wiadomość musi mieć 120 znaków");
       return;
     }
@@ -49,9 +51,9 @@ export default function HomeContact() {
         "Content-Type": "application/json",
       },
     })
-      .then((resp) => resp.text())
-      .then((resp) =>
-        resp.status === 200 //"success" też nie działa
+      .then((resp) => resp.json())
+      .then((data) =>
+        data.status === "success"
           ? setValidationMessage(
               "Wiadomość została wysłana! Wkrótce się skontaktujemy."
             )
@@ -65,7 +67,7 @@ export default function HomeContact() {
         <section className="contact container" id="contact">
           <form className="contact-form" onSubmit={handleSubmit}>
             <h2 className="contact-form__title">Skontaktuj się z nami</h2>
-            <p>{validationMessage}</p>
+            <p className="contact-form__success">{validationMessage}</p>
 
             <div className="form-section-wrapper">
               <div className="form-section">
