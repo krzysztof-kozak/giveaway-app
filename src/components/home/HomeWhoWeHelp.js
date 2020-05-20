@@ -1,72 +1,67 @@
-import React from "react";
-const API = "http://localhost:3000";
+import React, { useEffect, useState } from "react";
+const API = "http://localhost:3000/foundations";
 
 export default function HomeWhoWeHelp() {
-  fetch(`${API}/fundations`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  const [foundations, setFoundations] = useState([]);
+  const [current, setCurrent] = useState("Fundacjom");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [organizationsPerPage, setOrganizationsPerPage] = useState(3);
 
+  useEffect(() => {
+    fetch(API, { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => setFoundations(data))
+      .catch((err) => console.log(`Problem z API: ${err}`));
+  }, []);
+
+  const indexOfLastOrganization = currentPage * organizationsPerPage;
+  const indexOfFirstOrganization =
+    indexOfLastOrganization - organizationsPerPage;
+
+  const getCurrentFundation = () => {
+    return foundations?.find((foundation) => foundation.name === current);
+  };
+
+  const handleChangeFund = (e) => {
+    setCurrent(e.target.id);
+  };
+
+  if (!foundations) {
+    return <h1>Wczytuję dane fundacji...</h1>;
+  }
   return (
     <>
       <section className="who-we-help" id="who-we-help">
         <h2 className="who-we-help__title">Komu pomagamy?</h2>
+
         <div className="category-wrapper">
-          <button className="who-we-help__button">Fundacjom</button>
-          <button className="who-we-help__button">
-            Organizacjom
-            <br />
-            pozarządowym
-          </button>
-          <button className="who-we-help__button">
-            Lokalnym
-            <br />
-            zbiórkom
-          </button>
+          {foundations.map((foundation) => (
+            <button
+              id={foundation.name}
+              onClick={handleChangeFund}
+              className="who-we-help__button"
+            >
+              {foundation.name}
+            </button>
+          ))}
         </div>
-        <p className="who-we-help__text">
-          W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-          współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
-          czego potrzebują.
-        </p>
+
+        <p className="who-we-help__text">{getCurrentFundation()?.desc}</p>
+
         <div className="organizations-wrapper container">
-          <div className="organization">
-            <div className="organization__description">
-              <h3>Fundacja "Dbam o zdrowie"</h3>
-              <p>
-                Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
-                życiowej.
-              </p>
-            </div>
-            <p className="organization__items">
-              ubrania, jedzenie, sprzęt AGD, meble, zabawki
-            </p>
-          </div>
-
-          <div className="organization">
-            <div className="organization__description">
-              <h3>Fundacja “Dla dzieci”</h3>
-              <p>Cel i misja: Pomoc dzieciom z ubogich rodzin.</p>
-            </div>
-            <p className="organization__items">ubrania, meble, zabawki</p>
-          </div>
-
-          <div className="organization">
-            <div className="organization__description">
-              <h3>Fundacja “Bez domu”</h3>
-              <p>
-                Cel i misja: Pomoc dla osób nie posiadających miejsca
-                zamieszkania.
-              </p>
-            </div>
-            <p className="organization__items">
-              ubrania, jedzenie, ciepłe koce
-            </p>
-          </div>
+          {getCurrentFundation()
+            ?.items.slice(indexOfFirstOrganization, indexOfLastOrganization)
+            .map((fund) => (
+              <>
+                <div className="organization">
+                  <div className="organization__description">
+                    <h3>{fund.header}</h3>
+                    <p>{fund.subheader}</p>
+                  </div>
+                  <p className="organization__items">{fund.desc}</p>
+                </div>
+              </>
+            ))}
         </div>
       </section>
     </>
