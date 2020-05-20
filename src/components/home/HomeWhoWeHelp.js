@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import Pagination from "./Pagination";
 const API = "http://localhost:3000/foundations";
 
 export default function HomeWhoWeHelp() {
   const [foundations, setFoundations] = useState([]);
   const [current, setCurrent] = useState("Fundacjom");
   const [currentPage, setCurrentPage] = useState(1);
-  const [organizationsPerPage, setOrganizationsPerPage] = useState(3);
+  const [organizationsPerPage] = useState(3);
 
   useEffect(() => {
     fetch(API, { method: "GET" })
@@ -14,9 +15,16 @@ export default function HomeWhoWeHelp() {
       .catch((err) => console.log(`Problem z API: ${err}`));
   }, []);
 
+  // Get organization index
   const indexOfLastOrganization = currentPage * organizationsPerPage;
   const indexOfFirstOrganization =
     indexOfLastOrganization - organizationsPerPage;
+
+  //Change page
+  const paginate = (e, pageNumber) => {
+    e.preventDefault();
+    setCurrentPage(pageNumber);
+  };
 
   const getCurrentFundation = () => {
     return foundations?.find((foundation) => foundation.name === current);
@@ -63,6 +71,11 @@ export default function HomeWhoWeHelp() {
               </>
             ))}
         </div>
+        <Pagination
+          organizationsPerPage={organizationsPerPage}
+          totalOrganizations={getCurrentFundation()?.items.length}
+          paginate={paginate}
+        />
       </section>
     </>
   );
