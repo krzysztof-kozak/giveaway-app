@@ -23,7 +23,7 @@ export default function HomeContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validName = /^[A-Za-z]*$/;
+    const validName = /[A-Z][a-z]*/;
     const validEmail = /\S+@\S+\.\S+/;
 
     if (!validName.test(form.name)) {
