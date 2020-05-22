@@ -231,13 +231,31 @@ img.about-us__image {
   }
 }
 
+/* Pagination */
+.pagination__item {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+  padding: 1em;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    outline: 1px solid black;
+  }
+}
+
+.pagination__link {
+  text-decoration: none;
+  color: #000;
+}
+
 /* Contact */
 .background-wrapper {
   background-image: url(../../assets/background-contact-form.jpg);
   background-size: cover;
   position: relative;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -307,7 +325,7 @@ img.about-us__image {
   margin-bottom: 2em;
   position: relative;
   &::after {
-    content: "";
+    content: '';
     display: block;
     background-image: url(../../assets/Decoration.svg);
     width: 50%;
@@ -330,7 +348,7 @@ img.about-us__image {
   font-size: 1rem;
   max-width: 220px;
   color: green;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   align-self: center;
   line-height: 1.5;
