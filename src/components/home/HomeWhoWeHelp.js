@@ -17,8 +17,7 @@ export default function HomeWhoWeHelp() {
 
   // Get organization index
   const indexOfLastOrganization = currentPage * organizationsPerPage;
-  const indexOfFirstOrganization =
-    indexOfLastOrganization - organizationsPerPage;
+  const indexOfFirstOrganization = indexOfLastOrganization - organizationsPerPage;
 
   //Change page
   const paginate = (e, pageNumber) => {
@@ -32,6 +31,7 @@ export default function HomeWhoWeHelp() {
 
   const handleChangeFund = (e) => {
     setCurrent(e.target.id);
+    setCurrentPage(1);
   };
 
   if (!foundations) {
@@ -44,10 +44,7 @@ export default function HomeWhoWeHelp() {
 
         <div className='category-wrapper'>
           {foundations.map((foundation) => (
-            <button
-              id={foundation.name}
-              onClick={handleChangeFund}
-              className='who-we-help__button'>
+            <button id={foundation.name} onClick={handleChangeFund} className='who-we-help__button'>
               {foundation.name}
             </button>
           ))}
@@ -70,11 +67,7 @@ export default function HomeWhoWeHelp() {
               </>
             ))}
         </div>
-        <Pagination
-          organizationsPerPage={organizationsPerPage}
-          totalOrganizations={getCurrentFundation()?.items.length}
-          paginate={paginate}
-        />
+        <Pagination organizationsPerPage={organizationsPerPage} totalOrganizations={getCurrentFundation()?.items.length} paginate={paginate} />
       </section>
     </>
   );
