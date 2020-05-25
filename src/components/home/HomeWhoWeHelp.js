@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from './Pagination';
-const API = 'http://localhost:3000/foundations';
+const API = 'http://localhost:3001/foundations';
 
 export default function HomeWhoWeHelp() {
   const [foundations, setFoundations] = useState([]);
